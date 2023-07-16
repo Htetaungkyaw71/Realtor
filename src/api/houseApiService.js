@@ -76,10 +76,21 @@ export const houseApi = createApi({
   }),
   endpoints: (builder) => ({
     getHouse: builder.query({
-      query: () => ({
+      query: ({
+        purpose,
+        rentFrequency,
+        priceMin,
+        priceMax,
+        furnishingStatus,
+      }) => ({
         url: "list",
         params: {
           locationExternalIDs: "5002,6020",
+          purpose,
+          rentFrequency,
+          priceMin,
+          priceMax,
+          furnishingStatus,
         },
       }),
       transformResponse: (response) => response.hits,
