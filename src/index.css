@@ -50,3 +50,7 @@ body {
     margin-top: 50px;
   }
 }
+
+svg {
+  display: inline;
+}

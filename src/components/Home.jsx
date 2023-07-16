@@ -12,6 +12,8 @@ const Home = ({ itemsPerPage }) => {
     return <h1>Loading</h1>;
   }
 
+  console.log(houses);
+
   const endOffset = itemOffset + itemsPerPage;
   const currentItems = houses.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(houses.length / itemsPerPage);
@@ -24,7 +26,6 @@ const Home = ({ itemsPerPage }) => {
 
   // Pagination
 
-  console.log(houses);
   console.log(currentItems);
 
   return (
@@ -53,7 +54,7 @@ const Home = ({ itemsPerPage }) => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
           {currentItems.map((house) => (
-            <Card house={house} key={house.property_id} />
+            <Card house={house} key={house.id} />
           ))}
         </div>
         <div className="main-pagination">
