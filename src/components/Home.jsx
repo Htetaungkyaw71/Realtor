@@ -1,14 +1,31 @@
+/* eslint-disable react/prop-types */
+import { useState } from "react";
 import { useGetHouseQuery } from "../api/houseApiService";
+import ReactPaginate from "react-paginate";
 import Card from "./Card";
 
-const Home = () => {
+const Home = ({ itemsPerPage }) => {
+  const [itemOffset, setItemOffset] = useState(0);
   const { data: houses, isLoading } = useGetHouseQuery();
 
   if (isLoading) {
     return <h1>Loading</h1>;
   }
 
+  const endOffset = itemOffset + itemsPerPage;
+  const currentItems = houses.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(houses.length / itemsPerPage);
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % houses.length;
+    setItemOffset(newOffset);
+  };
+
+  // Pagination
+
+  // Pagination
+
   console.log(houses);
+  console.log(currentItems);
 
   return (
     <>
@@ -35,10 +52,23 @@ const Home = () => {
           <p className="text-gray-400">Own the House Meant for You.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 lg:grid-cols-3 xl:grid-cols-4 justify-items-center">
-          {houses.map((house) => (
+          {currentItems.map((house) => (
             <Card house={house} key={house.property_id} />
           ))}
         </div>
+        <div className="main-pagination">
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel="&raquo;"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={2}
+            pageCount={pageCount}
+            previousLabel="&laquo;"
+            renderOnZeroPageCount={null}
+            className="pagination"
+          />
+        </div>
+        ;
       </div>
     </>
   );
