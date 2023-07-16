@@ -3,6 +3,7 @@ import "./index.css";
 import Home from "./components/Home";
 import Detail from "./components/Detail";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/" element={<Home itemsPerPage={8} />} />
         <Route path="/detail/:id" element={<Detail />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
