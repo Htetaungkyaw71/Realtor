@@ -3,7 +3,7 @@ import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="p-20 bg-white h-24 container mx-auto flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row justify-around items-center border-t-2 mt-20">
+    <div className="p-10 bg-white container mx-auto flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row justify-around items-center border-t-2 ">
       <div>
         <Link to="/" className="text-2xl font-bold">
           <span className="text-sky-400">Real</span>
@@ -11,12 +11,12 @@ const Footer = () => {
         </Link>
       </div>
       <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row justify-center text-center">
-        <ul className="mr-0 sm:mr-0 md:mr-0 lg:mr-16 xl:mr-16 ">
+        <ul className="mr-0 sm:mr-0 md:mr-16 lg:mr-16 xl:mr-16 ">
           <li className="text-sky-300 font-bold mt-3">Services</li>
           <li className="text-gray-500 text-sm mt-3">Email Marketing</li>
           <li className="text-gray-500 text-sm mt-3">Campaigns</li>
         </ul>
-        <ul className="mr-0 sm:mr-0 md:mr-0 lg:mr-16 xl:mr-16 ">
+        <ul className="mr-0 sm:mr-0 md:mr-16 lg:mr-16 xl:mr-16 ">
           <li className="text-sky-300 font-bold mt-3">About</li>
           <li className="text-gray-500 text-sm mt-3">Our Story</li>
           <li className="text-gray-500 text-sm mt-3">Benefits</li>

@@ -95,15 +95,15 @@ export const houseApi = createApi({
       }),
       transformResponse: (response) => response.hits,
     }),
-    // getHouseDetail: builder.query({
-    //   query: (id) => ({
-    //     url: "detail",
-    //     method: "GET",
-    //     params: { property_id: id },
-    //   }),
-    //   transformResponse: (response) => response.data.home,
-    // }),
+    getHouseDetail: builder.query({
+      query: (id) => ({
+        url: "detail",
+        method: "GET",
+        params: { externalID: id },
+      }),
+      transformResponse: (response) => response,
+    }),
   }),
 });
 
-export const { useGetHouseQuery } = houseApi;
+export const { useGetHouseQuery, useGetHouseDetailQuery } = houseApi;
