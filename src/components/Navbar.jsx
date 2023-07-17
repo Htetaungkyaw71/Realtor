@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex flex-wrap top-0 justify-around p-4 bg-white shadow-md items-center fixed w-full">
+    <div className="flex flex-wrap top-0 z-10 justify-around p-4 bg-white shadow-md items-center fixed w-full">
       <div>
         <Link to="/" className="text-2xl font-bold">
           <span className="text-sky-400">Real</span>
