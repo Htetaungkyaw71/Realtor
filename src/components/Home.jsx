@@ -58,7 +58,7 @@ const Home = ({ itemsPerPage }) => {
         <div className="mt-10 text-center">
           <h1 className="text-sky-400 font-bold">EHM.So?</h1>
           <h1 className="font-bold text-3xl text-gray-500">What we do</h1>
-          <p className="text-gray-400">These are our angenices</p>
+          <p className="text-gray-400">These are our agencies</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 justify-items-center">
           <Agencies />
