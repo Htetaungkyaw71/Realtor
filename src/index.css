@@ -63,6 +63,102 @@ body {
   text-align: center;
 }
 
+/* Bounce animation */
+.bouncing-text {
+  position: relative;
+  display: flex;
+  font-size: 40px;
+  font-family: arial black;
+}
+.b,
+.o,
+.u,
+.n,
+.c,
+.e {
+  color: #4cc9f0;
+  text-shadow:
+    0 3px #4361ee,
+    0 5px #4361ee,
+    0 7px #4361ee;
+}
+
+.e,
+.c {
+  color: #374151;
+  text-shadow:
+    0 3px #374151,
+    0 5px #374151,
+    0 7px #374151;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-55px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  58% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  65% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+
+.b {
+  animation: bounce 1s ease infinite;
+}
+
+.o {
+  animation: bounce 1s ease infinite 0.1s;
+}
+
+.u {
+  animation: bounce 1s ease infinite 0.2s;
+}
+
+.n {
+  animation: bounce 1s ease infinite 0.3s;
+}
+
+.c {
+  animation: bounce 1s ease infinite 0.4s;
+}
+
+.e {
+  animation: bounce 1s ease infinite 0.5s;
+}
+
+@keyframes scale {
+  0% {
+    transform: scaleX(1);
+  }
+  25% {
+    transform: scaleX(0.4);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+  75% {
+    transform: scaleX(0.9);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* Bounce animation */
+
 @keyframes loading {
   0% {
     transform: rotate(0);

@@ -17,8 +17,17 @@ const Detail = () => {
 
   if (isLoading) {
     return (
-      <div className="loader-container mt-28">
-        <img src={r} className="loader" />
+      <div className="loader-container flex justify-center mt-28">
+        {/* <img src={r} className="loader" /> */}
+        <div className="bouncing-text">
+          <div className="b">R</div>
+          <div className="o">E</div>
+          <div className="u">A</div>
+          <div className="n">L</div>
+          <div className="c">T</div>
+          <div className="e">O</div>
+          <div className="e">R</div>
+        </div>
       </div>
     );
   }
@@ -118,7 +127,7 @@ const Detail = () => {
                 center={position}
                 zoom={13}
                 scrollWheelZoom={true}
-                className="h-96"
+                className="h-96 z-0"
               >
                 <TileLayer
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

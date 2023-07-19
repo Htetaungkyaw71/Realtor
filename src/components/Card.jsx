@@ -5,7 +5,10 @@ import { BsFillDoorOpenFill } from "react-icons/bs";
 /* eslint-disable react/prop-types */
 const Card = ({ house }) => {
   return (
-    <Link to={`detail/${house.externalID}`}>
+    <Link
+      to={`detail/${house.externalID}`}
+      className="hover:-mt-2 duration-500"
+    >
       <div className="bg-white w-80 sm:w-60 md:w-80 lg:w-full xl:w-full p-2 mt-4 border-none rounded-xl">
         <div className="">
           <img src={house.coverPhoto.url} className="w-full h-48" />

@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useGetHouseQuery } from "../api/houseApiService";
 import ReactPaginate from "react-paginate";
-import r from "../../public/r.png";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Results from "./Results";
@@ -22,8 +21,16 @@ const Home = ({ itemsPerPage }) => {
 
   if (isLoading) {
     return (
-      <div className="loader-container mt-28">
-        <img src={r} className="loader" />
+      <div className="loader-container flex justify-center mt-28">
+        <div className="bouncing-text">
+          <div className="b">R</div>
+          <div className="o">E</div>
+          <div className="u">A</div>
+          <div className="n">L</div>
+          <div className="c">T</div>
+          <div className="e">O</div>
+          <div className="e">R</div>
+        </div>
       </div>
     );
   }
@@ -36,12 +43,10 @@ const Home = ({ itemsPerPage }) => {
     setItemOffset(newOffset);
   };
 
-  console.log(currentItems);
-
   return (
     <>
       <Navbar />
-      <div className="container  flex justify-center items-center round-lg bg-[url(./assets/home_bg.jpg)] rounded-lg mb-10 mt-28 w-full h-96  mx-auto bg-cover bg-no-repeat">
+      <div className="container flex justify-center items-center round-lg bg-[url(./assets/home_bg1.jpg)] rounded-lg mb-10 mt-28 w-full h-96  mx-auto bg-cover bg-center bg-no-repeat">
         <div className="text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-gray-600">
             Lets find a home
@@ -60,9 +65,8 @@ const Home = ({ itemsPerPage }) => {
           <h1 className="font-bold text-3xl text-gray-500">What we do</h1>
           <p className="text-gray-400">These are our agencies</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 justify-items-center">
-          <Agencies />
-        </div>
+
+        <Agencies />
       </div>
 
       <TechCompanies />
@@ -166,7 +170,15 @@ const Home = ({ itemsPerPage }) => {
         </div>
         {isFetching ? (
           <div className="loader-container1 text-center">
-            <img src={r} className="loader" />
+            <div className="bouncing-text">
+              <div className="b">R</div>
+              <div className="o">E</div>
+              <div className="u">A</div>
+              <div className="n">L</div>
+              <div className="c">T</div>
+              <div className="e">O</div>
+              <div className="e">R</div>
+            </div>
           </div>
         ) : (
           <>
