@@ -8,10 +8,10 @@ A simple real estate application. Users can see properties and can search proper
 
 ## Getting Started
 ```
-git clone git@github.com:Htetaungkyaw71/Ecommerce.git
+git clone git@github.com:Htetaungkyaw71/Realtor.git
 ```
 ### Screenshot
-![This is an image](./s.png)
+![This is an image](./realtor.jpg)
 
 ### Live demo
 
@@ -22,7 +22,7 @@ git clone git@github.com:Htetaungkyaw71/Ecommerce.git
 * React
 * Redux-toolkit
 * Redux-toolkit query
-* Tailwind css
+* Tailwind CSS
 
 
 ### Installing
