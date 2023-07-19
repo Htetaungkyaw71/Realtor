@@ -62,8 +62,8 @@ const Detail = () => {
                 className="w-10 h-10 rounded-full"
               />
             </div>
-            <div className="flex justify-between items-center mt-10">
-              <div>
+            <div className="flex flex-wrap justify-between items-center mt-7">
+              <div className="mt-3">
                 <span className="text-gray-500 text-lg mr-4">
                   {data.baths}{" "}
                   <span className="text-sky-300">
@@ -77,7 +77,7 @@ const Detail = () => {
                   </span>
                 </span>
               </div>
-              <div>
+              <div className="mt-3">
                 <span className="text-gray-500  text-xl mr-4">
                   $ {data.price}
                 </span>
