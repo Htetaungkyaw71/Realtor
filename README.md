@@ -11,7 +11,7 @@ A simple real estate application. Users can see properties and can search proper
 git clone git@github.com:Htetaungkyaw71/Realtor.git
 ```
 ### Screenshot
-![This is an image](./realtor.jpg)
+![This is an image](./realtor.png)
 
 ### Live demo
 
